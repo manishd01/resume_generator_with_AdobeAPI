@@ -1,0 +1,55 @@
+body {
+    font-family: sans-serif;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+  }
+  
+  h1 {
+    text-align: center;
+    font-size: 24px;
+    color:red;
+    margin-top: 20px;
+  }
+  
+  form {
+    width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+  }
+  
+  textarea {
+    height: 150px;
+  }
+  
+  input[type="submit"] {
+    background-color: #000;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+  }
+  #form_select{
+    border: #000 solid 3px;
+  }
+  .select_files {
+    margin-top: 20px;
+  }
+  
+  #docFile, #jsonFile {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+  }

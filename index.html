@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Builder</title>
+    <link rel="stylesheet" href="./style.css" type="css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+
+    <script src="./processForm.js" type="module"> </script>
+</head>
+<body>
+    <h1> Resume Builder API :</h1>
+    <h3>Enter all details and click on button to generate a JSON which is needed for creation of resume</h3>
+    <form id="form_select">
+       
+        <label for="name">Name:</label>
+        <input type="text" id="name" required>
+      
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" required>
+      
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" placeholder="user1@abc.com" >
+        <br> <br>
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" placeholder="9992229991"  >
+      
+        <label for="linkedin">LinkedIn Profile:</label>
+        <input type="url" id="linkedIn" placeholder="https://www.user1.com" >
+      
+        <label for="jobTitle">Job Title:</label>
+        <input type="text" id="jobTitle" >
+        <br> <br>
+        <label for="summary">Summary:</label>
+        <textarea id="summary" required></textarea>
+        <br> <br>
+        <label for="skills">Skills:</label>
+        <input type="text" id="skills" >
+      
+        <label for="schoolName1">School Name 1:</label>
+        <input type="text" id="schoolName1" >
+        <label for="year1">Year 1:</label>
+        <input type="text" id="year1" >
+        <label for="description1">Description 1:</label>
+        <textarea id="description1" ></textarea>
+        <br> <br>
+        <label for="schoolName2">School Name 2:</label>
+        <input type="text" id="schoolName2" >
+        <label for="year2">Year 2:</label>
+        <input type="text" id="year2" >
+        <label for="description2">Description 2:</label>
+        <textarea id="description2" ></textarea>
+        <br> <br>
+        <label for="companyName">Company Name:</label>
+        <input type="text" id="companyName" >
+        <label for="experienceYear">Experience Year:</label>
+        <input type="text" id="experienceYear" >
+        <label for="experienceDescription">Experience Description:</label>
+        <textarea id="experienceDescription" ></textarea>
+      
+        <br> <br>
+        <label for="achievementType1">Achievement Type 1:</label>
+        <input type="text" id="achievementType1" >
+        <label for="achievementDescription1">Achievement Description 1:</label>
+        <textarea id="achievementDescription1" ></textarea>
+        <br> <br>
+        <label for="achievementType2">Achievement Type 2:</label>
+        <input type="text" id="achievementType2" >
+        <label for="achievementDescription2">Achievement Description 2:</label>
+        <textarea id="achievementDescription2" ></textarea>
+      
+        <br> <br>
+        <input  onclick="prcessForm(event)" id="submit_data" type="submit" value="Create JSON file" >
+
+        <br><br>
+        <h3> Now select, JSON file details and word template of resume, and when clicked on button will get a output PDF: </h3>
+        <h5>please Enter correct location </h5><form id="select_files">
+         <label for="docFile">Select DOC File:</label>
+        <!-- <input type="file" id="docFile" name="docFile" accept=".doc,.docx"> --> 
+        <input type="text" id="docFile" placeholder="Enter local location of document file:" name="docFile" accept=".doc,.docx">
+        <br><br>
+
+        <label for="jsonFile">Select JSON File:</label>
+        <!-- <input type="file" id="jsonFile" name="jsonFile" accept=".json"> -->
+        <input type="text" id="jsonFile" placeholder="Enter local location of JSON file:" name="jsonFile" accept=".json">
+
+        <br><br>
+        <input onclick="select_files(event)" id="submit_file" type="submit" value=" generate resume in PDF" >
+    </form>
+ 
+</body>
+</html>
